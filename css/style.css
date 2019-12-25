@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    background-color: rgb(255, 242, 242);
+    box-sizing: border-box;
+}
+
+a, button {
+	transition: all 0.5s ease;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+h3 .card__title {
+    text-align: center;
+    margin: 0;
+}
+
+h2{
+    font-size: 25px;
+}
+h3, ul>li, p {
+    text-align: start;
+}     
+
+.card {
+    margin: 0 auto;
+}
+
+.wrap {
+    border-radius: 10px;
+    width: 500px;
+    height: 700px; 
+    border: 2px solid rgb(66, 32, 32); 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) inset, 0 0 30px rgba(0,0,0,0.5); 
+    margin: 2em auto; background-color: rgb(165, 213, 235);
+}
+
+.card__img {
+    max-width: 350px;
+    margin: 1.5em auto; 
+    display: block;
+}
+
+.link__title {
+    font-size: 25px; 
+    text-decoration: none; 
+    color: rgb(37, 36, 36); 
+    max-width: 350px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+.card__description {
+    font-weight: 600; 
+    line-height: 1.4em; 
+    font-size: 18px; 
+    max-width: 350px; 
+    margin: 1em auto;
+}
+
+.card__link {
+    text-align: center; 
+    margin: 0 auto;
+    color:aliceblue; 
+    text-decoration: none; 
+    font-size: 15px; 
+    font-weight: 900; 
+    display: block; 
+    width: 200px; 
+    padding: 15px 30px; 
+    background-color: rgb(212, 36, 36); 
+    border: 2px solid rgb(34, 1, 1); 
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.card__link:hover {
+    background-color: aliceblue;
+    color: rgb(212, 36, 36); 
+}
+
+/* Styles for navbar */
+.header {
+    margin: 0;
+    background: radial-gradient(circle farthest-corner at 100px 50px, rgb(20, 141, 189), rgb(11, 105, 168));
+    padding: 2.5em 0;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar *{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar > ul li a {
+    display: block;
+    background: #ebf1f6; /* Old browsers */
+    background: -moz-linear-gradient(top, #ebf1f6 0%, #abd3ee 50%, #89c3eb 51%, #d5ebfb 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #86b3d8 0%,#3d82af 50%,#5087ac 51%,#0c7bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding: 17px 50px 20px 50px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e5e5ec;
+    transition: all 0.5s ease;
+    width: 76px;
+}
+
+.navbar > ul li{
+    position: relative;
+    border-right: 1px solid #288ce9;
+    margin-right: 11.6em;
+}
+
+.navbar > ul li > a{
+    position: absolute;
+    top: -30px;
+    left: 12px;
+}
+
+.navbar > ul li:first-child {
+    border-left: 1px solid #288ce9;
+}
+
+.navbar > ul li:last-child {
+    border-left: 1px solid #288ce9;
+}
+
+/* Burger MENU */
+.burger-menu{
+    margin-left: auto;
+    width: 320px;
+    background: linear-gradient(to bottom, #86b3d8 0%,#3d82af 50%,#5087ac 51%,#0c7bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 40px;
+    display: none;
+}
+
+#check-menu{
+    display: none;
+}
+
+label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 40px;
+}
+
+.burger-line{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    transition: .5s all;
+}
+
+.second, .third{
+    top: 18px;
+}
+
+.fourth{
+    top: 28px;
+}
+
+.main-menu{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.menu-link{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+    background: linear-gradient(to bottom, #86b3d8 0%,#3d82af 50%,#5087ac 51%,#0c7bca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.menu-link:hover{
+    background-color: rgba(236, 230, 230, 0.877);
+}
+
+#check-menu:checked ~ .main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .first{
+    display: none;
+}
+
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+
+/* Burger MENU END */
+/* Animation */
+
+.navbar li a:hover, .menu-link:hover {
+    background: #d9d9f3;
+    color: rgb(0, 15, 99);
+    box-shadow: 1px 5px 18px -5px black;
+    transition: all 0.3s ease;
+}
+
+/* Submenu */
+
+.navbar li ul {
+    position: absolute;
+    min-width: 200px;
+    left: 0px;
+    display: none;
+}
+
+.navbar li > ul li {
+    display: block;
+    margin-top: 53px;
+    border: 1px solid #c7c8ca;
+}
+
+.navbar li > ul li > a {
+    padding: 18px;
+    text-transform: none;
+    background-color: #e4e4e5;
+    width:140px;
+    text-align: center;
+}
+.navbar li > ul li ul{
+    position: absolute;
+    right: -150px;
+    top: 0;
+    margin: -53px 0 0 176px;
+}
+
+.navbar li:hover > ul {
+    display: block;
+}
+
+/* Styles for navbar END */
+
+/* Styles for owerpage */
+
+.card-ower {
+    margin: 0 auto; 
+    text-align: center;
+    background:radial-gradient(circle farthest-corner at 100px 50px, rgb(214, 227, 233), rgb(166, 195, 216));
+    padding: 100px 0;
+}
+
+.card-ower__title, h2, h3, h4 {
+    color: rgb(8, 8, 109);
+}
+            
+.card__wrap {
+    margin: 0;
+}
+
+span {
+    color: orange;
+}
+
+.card__text>span {
+    font-weight: 900;
+    color: #000;
+    text-decoration: underline;
+}                
+.card__title {
+    font-size: 35px;
+}
+
+.card__text, .card__list>.card__item{
+    line-height: 1.4em;
+    font-size: 18px; 
+}
+/* Styles for owerpage END */
+/* footer */
+.footer {
+    padding: 25px 0;
+    background:radial-gradient(circle farthest-corner at 100px 50px, rgb(62, 62, 63), rgb(27, 27, 27));
+}
+
+.copy__text {
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+}
+/* footer END */
+
+/* responsive */
+
+@media screen and (max-width: 942px) {
+	.container {
+		width: 90%;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .wrap {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .card__img {
+        width: 90%;
+    }
+
+    .card-ower {
+        padding: 50px 0;
+    }
+
+    .card__link {
+        max-width: 150px;
+    }
+}
